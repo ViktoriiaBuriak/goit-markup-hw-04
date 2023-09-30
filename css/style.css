@@ -96,6 +96,10 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link-underline {
+  color: #404bbf;
+}
+
 .link-underline:hover::after {
   transform: scaleY(1);
 }
@@ -351,9 +355,11 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-portfolio-lists:hover .portfolio-cover-container {
+.our-portfolio-lists:hover .portfolio-cover-text {
   transform: translateY(0);
 }
 
@@ -362,23 +368,19 @@ img {
   overflow: hidden;
 }
 
-.portfolio-cover-container {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-  background-color: #4d5ae5;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .portfolio-cover-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-portfolio-text {
